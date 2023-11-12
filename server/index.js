@@ -1,10 +1,9 @@
 const express = require("express");
-const { auth, resolver, loaders } = require("@iden3/js-iden3-auth");
+const { auth, resolver, loaders,protocol,circuits } = require("@iden3/js-iden3-auth");
 const getRawBody = require("raw-body");
 const { Server } = require("socket.io");
 const cors = require("cors");
 const { humanReadableAuthReason, proofRequest } = require("./proofRequest");
-
 require("dotenv").config();
 
 const app = express();
@@ -24,6 +23,7 @@ app.get("/", (req, res) => {
   );
 });
 
+
 const server = app.listen(port, () => {
   console.log(`server running on port ${port}`);
 });
@@ -40,7 +40,14 @@ const authRequests = new Map();
 const apiPath = {
   getAuthQr: "/api/get-auth-qr",
   handleVerification: "/api/verification-callback",
+  getDid: "/api/getDid"
 };
+
+app.get(apiPath.getDid, (req, res) => {
+  res.json({
+    user_did: process.env.VERIFIER_DID
+  });
+});
 
 app.get(apiPath.getAuthQr, (req, res) => {
   getAuthQr(req, res);
@@ -65,7 +72,6 @@ const socketMessage = (fn, status, data) => ({
 // GetQR returns auth request
 async function getAuthQr(req, res) {
   const sessionId = req.query.sessionId;
-
   console.log(`getAuthQr for ${sessionId}`);
 
   io.sockets.emit(
@@ -92,14 +98,12 @@ async function getAuthQr(req, res) {
   authRequests.set(sessionId, request);
 
   io.sockets.emit(sessionId, socketMessage("getAuthQr", STATUS.DONE, request));
-
   return res.status(200).set("Content-Type", "application/json").send(request);
 }
 
 // handleVerification verifies the proof after get-auth-qr callbacks
 async function handleVerification(req, res) {
   const sessionId = req.query.sessionId;
-
   // get this session's auth request for verification
   const authRequest = authRequests.get(sessionId);
 
@@ -133,7 +137,7 @@ async function handleVerification(req, res) {
   const verificationKeyloader = new loaders.FSKeyLoader(keyDIR);
   const sLoader = new loaders.UniversalSchemaLoader("ipfs.io");
   const verifier = new auth.Verifier(verificationKeyloader, sLoader, resolvers);
-
+//tomáš rafaj
   try {
     const opts = {
       AcceptedStateTransitionDelay: 5 * 60 * 1000, // up to a 5 minute delay accepted by the Verifier

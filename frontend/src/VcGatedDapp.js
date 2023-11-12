@@ -72,7 +72,12 @@ function VcGatedDapp() {
         const blockNumber = await publicClient.getBlockNumber();
         setCurrentBlockNumber(blockNumber);
       };
-
+      const fetchDid = async () => {
+        const response = await fetch("http://localhost:8080" + "/api/getDid");
+        const data = await response.text();
+        console.log(data);
+      };
+      fetchDid();
       readCount();
       checkCurrentBlockNumber();
     }
@@ -217,6 +222,7 @@ function VcGatedDapp() {
             </ul>
           </div>
         </Container>
+        <div>Hello, your DID is :</div>
       </Box>
     </div>
   );

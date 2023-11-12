@@ -50,7 +50,6 @@ function PolygonIDVerifier({
   useEffect(() => {
     socket.on("connect", () => {
       setSessionId(socket.id);
-
       // only watch this session's events
       socket.on(socket.id, (arg) => {
         setSocketEvents((socketEvents) => [...socketEvents, arg]);
@@ -66,6 +65,7 @@ function PolygonIDVerifier({
     };
 
     if (sessionId) {
+      console.log(qrCodeData)
       fetchQrCode().then(setQrCodeData).catch(console.error);
     }
   }, [sessionId]);
@@ -74,7 +74,6 @@ function PolygonIDVerifier({
   useEffect(() => {
     if (socketEvents.length) {
       const currentSocketEvent = socketEvents[socketEvents.length - 1];
-
       if (currentSocketEvent.fn === "handleVerification") {
         if (currentSocketEvent.status === "IN_PROGRESS") {
           setIsHandlingVerification(true);
@@ -117,7 +116,7 @@ function PolygonIDVerifier({
 
       {qrCodeData && (
         <Modal isOpen={isOpen} onClose={onClose} isCentered>
-          <ModalOverlay />
+          <ModalOverlay/>
           <ModalContent>
             <ModalHeader>
               Scan this QR code from your{" "}
