@@ -1,0 +1,254 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "C:\\Users\\asus\\Desktop\\DP\\test\\PolygonID testing\\fullstack-polygon-id-vc-gated-dapp\\frontend\\contracts\\Election.sol": {
+      "lastModificationDate": 1700048713291,
+      "contentHash": "02bf019f16970dfdd7cdd4030fed7834",
+      "sourceName": "contracts/Election.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.8.19"
+      ],
+      "artifacts": [
+        "Election"
+      ]
+    },
+    "C:\\Users\\asus\\Desktop\\DP\\test\\PolygonID testing\\fullstack-polygon-id-vc-gated-dapp\\frontend\\contracts\\Token.sol": {
+      "lastModificationDate": 1701195497645,
+      "contentHash": "fa34c3a061dd584ca4ed012cf73b85e0",
+      "sourceName": "contracts/Token.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "hardhat/console.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.9"
+      ],
+      "artifacts": [
+        "Token"
+      ]
+    },
+    "C:\\Users\\asus\\Desktop\\DP\\test\\PolygonID testing\\fullstack-polygon-id-vc-gated-dapp\\frontend\\node_modules\\hardhat\\console.sol": {
+      "lastModificationDate": 1700049369006,
+      "contentHash": "896f68942c3a20e9ae3c3c5bfd3add54",
+      "sourceName": "hardhat/console.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.4.22 <0.9.0"
+      ],
+      "artifacts": [
+        "console"
+      ]
+    },
+    "C:\\Users\\asus\\Desktop\\DP\\test\\PolygonID testing\\fullstack-polygon-id-vc-gated-dapp\\frontend\\contracts\\CarListing.sol": {
+      "lastModificationDate": 1701786420834,
+      "contentHash": "22aea3228061fc34d64a502c11bf3b74",
+      "sourceName": "contracts/CarListing.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "CarListing"
+      ]
+    },
+    "C:\\Users\\asus\\Desktop\\DP\\test\\PolygonID testing\\fullstack-polygon-id-vc-gated-dapp\\frontend\\contracts\\RentalAgreement.sol": {
+      "lastModificationDate": 1701786997758,
+      "contentHash": "9008da2bc72e04b6a44af88b2bf73b90",
+      "sourceName": "contracts/RentalAgreement.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./CarListing.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "RentalAgreement"
+      ]
+    },
+    "C:\\Users\\asus\\Desktop\\DP\\test\\PolygonID testing\\fullstack-polygon-id-vc-gated-dapp\\frontend\\contracts\\PaymentEscrow.sol": {
+      "lastModificationDate": 1701424179109,
+      "contentHash": "7cc99c1969ba9b8a7f37bc5a75712f12",
+      "sourceName": "contracts/PaymentEscrow.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "PaymentEscrow"
+      ]
+    },
+    "C:\\Users\\asus\\Desktop\\DP\\test\\PolygonID testing\\fullstack-polygon-id-vc-gated-dapp\\frontend\\contracts\\UserRegistration.sol": {
+      "lastModificationDate": 1701423239952,
+      "contentHash": "97bc2b65a757d269d9188e1c899f59c7",
+      "sourceName": "contracts/UserRegistration.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "UserRegistration"
+      ]
+    }
+  }
+}

@@ -2,16 +2,19 @@ import "./App.css";
 import { useState } from "react";
 import PolygonIDVerifier from "./PolygonIDVerifier";
 import VcGatedDapp from "./VcGatedDapp";
+import Dapp from "./components/Dap";
+//import { Dapp } from "./components/Daapp";
 import { Center, Card, Image, CardBody, Container } from "@chakra-ui/react";
+import { Contract } from "ethers";
 
 function App() {
   // if you're developing and just want to see the dapp without going through the Polygon ID flow,
   // temporarily set this to "true" to ignore the Polygon ID check and go straight to the dapp page
-  const [provedAccessBirthday, setProvedAccessBirthday] = useState(true);
+  const [provedAccessBirthday, setProvedAccessBirthday] = useState(false);
   return (
     <>
       {provedAccessBirthday ? (
-        <VcGatedDapp />
+        <Dapp />
       ) : (
         <Center className="vc-check-page">
           <Container>
